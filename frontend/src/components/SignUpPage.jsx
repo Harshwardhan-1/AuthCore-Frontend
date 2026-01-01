@@ -6,8 +6,6 @@ export default function SignUpPage(){
     const [name,setName]=useState("");
     const [gmail,setGmail]=useState("");
     const [password,setPassword]=useState("");
-
-
     const handle=async(e)=>{
         e.preventDefault();
         try{
@@ -16,13 +14,14 @@ export default function SignUpPage(){
         if(response.data.message==="Successfully Login"){
             navigate("/signIn");
         }
-        else if(response.data.message=== "Something went wrong"){
-            alert("Something went wrong");
-        }
-    }catch{
-        console.log("Something went wrong");
+    }catch(err){
+        if(err.response?.data?.message=== "Enter proper detail"){
+                alert("Fill your details properly");
+            }else if(err.response?.data?.message=== "Something went wrong"){
+                alert("Something went wrong");
+            }
     }
-    }
+}
     return(
         <>
         <h1>hello</h1>
