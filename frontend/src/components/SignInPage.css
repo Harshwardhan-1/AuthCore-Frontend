@@ -40,6 +40,8 @@
     border: 1px solid #ccc;
     border-radius: 10px;
     outline: none;
+    box-sizing: border-box;
+    text-align: left; 
     transition: all 0.25s ease-in-out;
 }
 
@@ -58,6 +60,7 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    box-sizing: border-box;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -81,6 +84,7 @@
 .signin-form-wrapper p a:hover {
     text-decoration: underline;
 }
+
 
 @media (max-width: 500px) {
     .signin-form-wrapper {

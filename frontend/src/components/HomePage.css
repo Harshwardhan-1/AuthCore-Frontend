@@ -8,6 +8,7 @@
     text-align: center;
     padding: 20px;
     background: linear-gradient(135deg, #6e8efb, #a777e3);
+    box-sizing: border-box;
 }
 
 .homepage-container h1 {
@@ -21,7 +22,9 @@
     font-size: 20px;
     margin: 6px 0;
     color: #f0f0f0;
+    word-break: break-word; 
 }
+
 
 @media (max-width: 500px) {
     .homepage-container h1 {
