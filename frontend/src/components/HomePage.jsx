@@ -1,10 +1,9 @@
-export default function HomePage({data}){
-    
+export default function HomePage({userData}){
     return(
         <>
         <h1>Welcome to HomePage</h1>
-        <p>{data.name}</p>
-        <p>{data.gmail}</p>
+        <p>{userData.name}</p>
+        <p>{userData.gmail}</p>
         </>
     );
 }

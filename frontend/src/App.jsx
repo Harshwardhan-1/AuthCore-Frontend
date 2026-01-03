@@ -11,7 +11,7 @@ function App() {
     <Routes>
       <Route path='/' element={<SignUpPage />}></Route>
       <Route path='/signIn' element={<SignInPage setUserData={setUserData} />}></Route>
-      <Route path='/HomePage' element={<HomePage data={userData}/>}></Route>
+      <Route path='/HomePage' element={<HomePage userData={userData}/>}></Route>
     </Routes>
     </>
   )
