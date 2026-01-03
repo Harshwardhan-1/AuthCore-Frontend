@@ -26,7 +26,7 @@ export default function ForgotPassword({setUserPassword}){
         <>
         <h1>Forgot password</h1>
         <form onSubmit={handle}>
- <input type="email" placeholder="enter your gmail here" name="email" onChange={(e)=>setGmail(e.target.value)}/>
+ <input type="email" placeholder="enter your gmail here"  onChange={(e)=>setGmail(e.target.value)}/>
  <button type="submit">Click here</button>
         </form>
         </>
