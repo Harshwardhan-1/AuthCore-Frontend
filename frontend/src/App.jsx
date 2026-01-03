@@ -5,7 +5,7 @@ import HomePage from './components/HomePage';
 import {useState} from 'react';
 function App() {
 
-  const [userData,setUserData]=useState({});
+  const [userData,setUserData]=useState(null);
   return (
     <>
     <Routes>

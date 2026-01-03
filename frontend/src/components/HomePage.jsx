@@ -1,12 +1,10 @@
-export default function HomePage({userData}){
-     if (!userData || !userData.name) {
-    return <h1>Loading user data... please login first</h1>;
-  }
+export default function HomePage({data}){
+    
     return(
         <>
         <h1>Welcome to HomePage</h1>
-        <p>{userData.name}</p>
-        <p>{userData.gmail}</p>
+        <p>{data.name}</p>
+        <p>{data.gmail}</p>
         </>
     );
 }
