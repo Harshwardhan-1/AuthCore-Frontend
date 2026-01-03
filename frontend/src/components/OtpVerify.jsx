@@ -33,7 +33,7 @@ export default function OtpVerify({passwordData}){
         <div className="otp-page-container">
     <div className="otp-form-wrapper">
         <h1>Enter your otp here</h1>
-        <p>{passwordData.name}</p>
+        <p>{passwordData.name} enter your otp here</p>
         <form onSubmit={handle} className="otp-form">
             <input type="text" placeholder="Enter your otp here"  onChange={(e)=>setOtp(e.target.value)} />
             <button type="submit" >Click me</button>
