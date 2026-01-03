@@ -26,15 +26,17 @@ export default function SignUpPage(){
 }
     return(
         <>
-          <div className="signup-page-container">
+            <div className="signup-page-container">
+            <div className="signup-form-wrapper">
         <form onSubmit={handle}>
             <input type="text" placeholder="Enter your name here"  onChange={(e)=>setName(e.target.value)}/>
             <input type="email" placeholder="Enter your email here" onChange={(e)=>setGmail(e.target.value)} />
             <input type="password" placeholder="Enter your password here"  onChange={(e)=>setPassword(e.target.value)} />
             <input type="submit" />
         </form>
-        <p>already have an account? <span>login</span> <Link to="/signIn">login</Link></p>
+        <p>already have an account?<Link to="/signIn">login</Link></p>
         <p>forgot your password <Link to={'/forgotPassword'}>click here</Link></p>
+        </div>
         </div>
         </>
     );
