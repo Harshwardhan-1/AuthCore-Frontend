@@ -18,6 +18,7 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; 
 }
 
 .signup-form-wrapper:hover {
@@ -32,6 +33,7 @@
     color: #333;
 }
 
+
 .signup-form input {
     width: 100%;
     padding: 14px 16px;
@@ -41,8 +43,8 @@
     border-radius: 10px;
     outline: none;
     transition: all 0.25s ease-in-out;
+    box-sizing: border-box; 
 }
-
 .signup-form input:focus {
     border-color: #6e8efb;
     box-shadow: 0 0 8px rgba(110, 142, 251, 0.5);
@@ -84,7 +86,7 @@
 
 @media (max-width: 500px) {
     .signup-form-wrapper {
-        padding: 30px 20px;
+        padding: 30px 15px;
         width: 95%;
     }
 
