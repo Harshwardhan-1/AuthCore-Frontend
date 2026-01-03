@@ -34,6 +34,7 @@ export default function SignInPage({setUserData}){
             <input type="password" placeholder='Enter your password here' onChange={(e)=>setPassword(e.target.value)} />
             <input type="submit" />
          </form>
+         <p>dont have an account go to <Link to='/' >SignUpPage</Link></p>
          </div>
          </div>
         </>
