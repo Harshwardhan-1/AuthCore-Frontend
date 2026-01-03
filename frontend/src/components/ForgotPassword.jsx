@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-export default function ForgotPassword({setUserPassword}){
+export default function ForgotPassword({setPasswordData}){
     const navigate=useNavigate();
     const [gmail,setGmail]=useState("");
     const handle=async(e)=>{
@@ -10,7 +10,7 @@ export default function ForgotPassword({setUserPassword}){
         try{
         const response=await axios.post('https://authcore-backend-3.onrender.com/api/all/forgotPassword',send,{withCredentials:true});
         if(response.data.message=== 'otp send successfully'){
-            setUserPassword(response.data.data);
+            setPasswordData(response.data.data);
             navigate('/OtpVerify');
         }    
     }catch(err){
