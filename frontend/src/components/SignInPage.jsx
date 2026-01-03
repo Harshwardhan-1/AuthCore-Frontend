@@ -27,8 +27,8 @@ export default function SignInPage({setUserData}){
         <>
          <h1>Hii welcome to sign in page</h1>
          <form onSubmit={handle}>
-            <input type="email" placeholder="Enter your gmail here" onChange={(e)=>setGmail(e.target.value)} />
-            <input type="password" placeholder='Enter your password heere' onChange={(e)=>setPassword(e.target.value)} />
+            <input type="email" placeholder="Enter your gmail here" name='email' onChange={(e)=>setGmail(e.target.value)} />
+            <input type="password" placeholder='Enter your password heere' name='password' onChange={(e)=>setPassword(e.target.value)} />
             <input type="submit" />
          </form>
         </>

@@ -26,9 +26,9 @@ export default function SignUpPage(){
         <>
         <h1>hello</h1>
         <form onSubmit={handle}>
-            <input type="text" placeholder="Enter your name here" onChange={(e)=>setName(e.target.value)}/>
-            <input type="email" placeholder="Enter your email here" onChange={(e)=>setGmail(e.target.value)} />
-            <input type="password" placeholder="Enter your password here" onChange={(e)=>setPassword(e.target.value)} />
+            <input type="text" placeholder="Enter your name here" name="name" onChange={(e)=>setName(e.target.value)}/>
+            <input type="email" placeholder="Enter your email here" name="gmail" onChange={(e)=>setGmail(e.target.value)} />
+            <input type="password" placeholder="Enter your password here" name="password" onChange={(e)=>setPassword(e.target.value)} />
             <input type="submit" />
         </form>
         </>
