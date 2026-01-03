@@ -1,7 +1,39 @@
+import { useState } from "react";
+import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 export default function OtpVerify({passwordData}){
+    const navigate=useNavigate();
+    const [otp,setOtp]=useState("");
+    const handle=async(e)=>{
+        e.preventDefault();
+    const send={otp};
+    try{
+    const response=await axios.post('https://authcore-backend-3.onrender.com/api/all/OtpVerify',send,{withCredentials:true});
+    if(response.data.message==="User enter correct otp"){
+        navigate("/NewPassword");
+    }
+    }catch(err){
+        if(err.response?.data?.message==='user not found'){
+            alert('please do a sign upfirst');
+            navigate('/');
+        }else if(err.response?.data?.message=== 'user has not yet click forgot password'){
+            alert('Enter correct otp');
+        }else if(err.reponse?.data?.message==="please enter correct otp"){
+            alert('otp invalid');
+        }else if(err.response?.data?.message==='Enter otp correctly'){
+            alert('enter otp correctly');
+        }else if(err.response?.data?.message=== 'incorrect otp'){
+            alert('you enter incorrect otp');
+        }
+    }
+    }
     return(
         <>
-        <p>{passwordData.name} enter your otp here</p>
+        <p>{passwordData.name}</p>
+        <form onSubmit={handle}>
+            <input type="text" placeholder="Enter your otp here"  onChange={(e)=>setOtp(e.target.value)} />
+            <button type="submit" >Click me</button>
+        </form>
         </>
     );
 }
