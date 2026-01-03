@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import './SignUpPage.css';
 export default function SignUpPage(){
     const navigate=useNavigate();
     const [name,setName]=useState("");
@@ -24,13 +26,16 @@ export default function SignUpPage(){
 }
     return(
         <>
-        <h1>hello</h1>
+          <div className="signup-page-container">
         <form onSubmit={handle}>
             <input type="text" placeholder="Enter your name here"  onChange={(e)=>setName(e.target.value)}/>
             <input type="email" placeholder="Enter your email here" onChange={(e)=>setGmail(e.target.value)} />
             <input type="password" placeholder="Enter your password here"  onChange={(e)=>setPassword(e.target.value)} />
             <input type="submit" />
         </form>
+        <p>already have an account? <span>login</span> <Link to="/signIn">login</Link></p>
+        <p>forgot your password <Link to={'/forgotPassword'}>click here</Link></p>
+        </div>
         </>
     );
 }

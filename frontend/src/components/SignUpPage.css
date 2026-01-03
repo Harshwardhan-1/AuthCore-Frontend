@@ -1,0 +1,69 @@
+/* SignUpPage.css */
+
+.signup-page-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-page-container form {
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signup-page-container input[type="text"],
+.signup-page-container input[type="email"],
+.signup-page-container input[type="password"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.signup-page-container input[type="text"]:focus,
+.signup-page-container input[type="email"]:focus,
+.signup-page-container input[type="password"]:focus {
+    border: 2px solid #4CAF50;
+}
+
+.signup-page-container input[type="submit"] {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-page-container input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.signup-page-container p {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.signup-page-container p span, 
+.signup-page-container p a {
+    color: #4CAF50;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.signup-page-container p span:hover, 
+.signup-page-container p a:hover {
+    text-decoration: underline;
+}

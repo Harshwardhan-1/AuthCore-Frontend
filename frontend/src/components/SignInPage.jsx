@@ -17,7 +17,7 @@ export default function SignInPage({setUserData}){
     }catch(err){
         if(err.response?.data?.message==="Something went Wrong"){
             alert('please do signUp first');
-            navigate('/getSignUp');
+            navigate('/');
         }else if(err.response?.data?.message==="Something went wrong"){
             alert('enter correct password');
         }
