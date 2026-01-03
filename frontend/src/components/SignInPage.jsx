@@ -32,7 +32,7 @@ export default function SignInPage({setUserData}){
          <form onSubmit={handle} className="signin-form">
             <input type="email" placeholder="Enter your gmail here"  onChange={(e)=>setGmail(e.target.value)} />
             <input type="password" placeholder='Enter your password here' onChange={(e)=>setPassword(e.target.value)} />
-            <button type='submit'>Submit</button>
+            <input type="submit" />
          </form>
          </div>
          </div>

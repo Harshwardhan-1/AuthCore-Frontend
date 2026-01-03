@@ -1,10 +1,19 @@
-.homepage-container{
-    height: 90px;
-    width: 100px;
-    border-radius: 2px solid black;
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 97vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
-.homepage-container h1{
-    height: 10px;
-    width: 10px;
+.homepage-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.homepage-container p {
+    font-size: 18px;
+    margin: 5px 0;
 }
