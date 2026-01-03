@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import './NewPassword.css';
 export default function NewPassword(){
     const navigate=useNavigate();
     const [password,setPassword]=useState("");
@@ -26,12 +27,16 @@ export default function NewPassword(){
     }
     return(
         <>
-        <h1>Enter your new Password here</h1>
-        <form onSubmit={handle}>
+        <div className="newpass-page-container">
+    <div className="newpass-form-wrapper">
+        <h1>Enter your password here</h1>
+        <form onSubmit={handle} className="newpass-form">
  <input type="password" placeholder="Enter your newPassword here" onChange={(e)=>setPassword(e.target.value)}/>
  <input type="password" placeholder="Enter your confirmPassword here" onChange={(e)=>setConfirmPassword(e.target.value)}/>
  <button type="submit">click here</button>
         </form>
+        </div>
+        </div>
         </>
     );
 }

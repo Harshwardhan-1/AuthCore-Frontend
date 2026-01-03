@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './SignInPage.css'
 export default function SignInPage({setUserData}){
     const navigate=useNavigate();
     const [gmail,setGmail]=useState("");
@@ -25,12 +26,16 @@ export default function SignInPage({setUserData}){
 }
     return(
         <>
-         <h1>Hii welcome to sign in page</h1>
-         <form onSubmit={handle}>
+         <div className="signin-page-container">
+            <div className="signin-form-wrapper">
+         <h1>Welcome to Login Page</h1>
+         <form onSubmit={handle} className="signin-form">
             <input type="email" placeholder="Enter your gmail here"  onChange={(e)=>setGmail(e.target.value)} />
             <input type="password" placeholder='Enter your password here' onChange={(e)=>setPassword(e.target.value)} />
             <input type="submit" />
          </form>
+         </div>
+         </div>
         </>
     );
 }

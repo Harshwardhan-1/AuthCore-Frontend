@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import './OtpVerify.css';
 export default function OtpVerify({passwordData}){
     const navigate=useNavigate();
     const [otp,setOtp]=useState("");
@@ -29,11 +30,16 @@ export default function OtpVerify({passwordData}){
     }
     return(
         <>
+        <div className="otp-page-container">
+    <div className="otp-form-wrapper">
+        <h1>Enter your otp here</h1>
         <p>{passwordData.name}</p>
-        <form onSubmit={handle}>
+        <form onSubmit={handle} className="otp-form">
             <input type="text" placeholder="Enter your otp here"  onChange={(e)=>setOtp(e.target.value)} />
             <button type="submit" >Click me</button>
         </form>
+        </div>
+        </div>
         </>
     );
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import './ForgotPassword.css'
 export default function ForgotPassword({setPasswordData}){
     const navigate=useNavigate();
     const [gmail,setGmail]=useState("");
@@ -24,11 +25,15 @@ export default function ForgotPassword({setPasswordData}){
     }
     return(
         <>
-        <h1>Forgot password</h1>
-        <form onSubmit={handle}>
+        <div className="forgot-page-container">
+    <div className="forgot-form-wrapper">
+        <h1>Enter your email here</h1>
+        <form onSubmit={handle}  className="forgot-form">
  <input type="email" placeholder="enter your gmail here"  onChange={(e)=>setGmail(e.target.value)}/>
  <button type="submit">Click here</button>
         </form>
+        </div>
+        </div>
         </>
     );
 }
